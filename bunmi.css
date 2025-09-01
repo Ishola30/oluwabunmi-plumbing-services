@@ -79,7 +79,7 @@ h1, h2, h3 {
 .hero-header {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bun1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bun2.png);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -515,4 +515,5 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
