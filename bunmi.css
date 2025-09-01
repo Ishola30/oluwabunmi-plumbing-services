@@ -79,7 +79,7 @@ h1, h2, h3 {
 .hero-header {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(bun2.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1582234033100-2f3b909f196a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -187,38 +187,16 @@ h1, h2, h3 {
     border-color: #fff;
 }
 
-/* New base rule for menu icons (hidden by default) */
+/* This rule hides the menu icons by default on all screen sizes */
 .fa-xmark, .fa-bars {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
-    display: none;
+    display: none !important; /* The `!important` rule ensures it is not overridden */
 }
 
-/* ==========================================================================
-   Responsiveness
-   ========================================================================== */
-
-/* Mobile-First: Start by styling for smaller screens. */
-/* Your current styles are already mobile-first, which is great! */
-
-/* Media query for mobile devices (up to 768px) */
+/* This media query shows the menu icons only on screens smaller than 768px */
 @media (max-width: 768px) {
-    /* Show the hamburger and close icons */
-    .fa-bars {
-        display: block;
-        z-index: 201; /* Higher z-index to be on top */
-    }
-
-    .fa-xmark {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 201;
-    }
-
-    /* Style for the mobile menu */
     .nav-links {
         position: fixed;
         background: var(--primary-color);
@@ -228,59 +206,34 @@ h1, h2, h3 {
         right: -250px;
         text-align: left;
         z-index: 200;
-        transition: right 1s; /* Corrected transition property */
+        transition: 1s;
     }
 
     .nav-links ul { padding: 30px; margin-top: 50px; }
     .nav-links ul li { display: block; padding: 15px 0; }
     .nav-links ul li a { font-size: 1.2rem; }
-
-    /* Fix the footer layout on mobile */
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .footer-links ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .footer-social {
-        margin-top: 10px;
-    }
-}
-
-/* Media query for Tablet screens (from 769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* Adjust spacing for medium-sized screens */
-    .container {
-        padding: 40px 0;
-    }
-    .grid-layout, .contact-grid {
-        gap: 20px;
-    }
-}
-
-/* Media query for Desktop screens (from 1025px) */
-@media (min-width: 1025px) {
-    /* Hide the mobile menu icons on desktop */
+    
     .fa-xmark, .fa-bars {
-        display: none;
+        display: block !important; /* This shows the buttons on mobile */
+        position: absolute;
+        right: 6%;
+        top: 20px;
+        z-index: 201;
     }
-    /* Display the full navigation links on desktop */
-    .nav-links {
-        display: block;
+
+    .fa-xmark {
+        right: 20px;
+        top: 20px;
     }
-    .nav-links ul {
-        margin: 0;
-    }
-    .nav-links ul li {
-        display: inline-block;
-    }
+
+    .footer-container { flex-direction: column; gap: 20px; }
+    .footer-links ul { flex-direction: column; }
+    .footer-social { margin-top: 10px; }
 }
 
 /* ==========================================================================
    Services, About, and Teams Sections
+   (The following code is unchanged from the previous version)
    ========================================================================== */
 .grid-layout {
     display: grid;
@@ -383,6 +336,7 @@ h1, h2, h3 {
 
 /* ==========================================================================
    Projects Section
+   (The following code is unchanged from the previous version)
    ========================================================================== */
 .grid-gallery {
     display: grid;
@@ -406,6 +360,7 @@ h1, h2, h3 {
 
 /* ==========================================================================
    Testimonials Section
+   (The following code is unchanged from the previous version)
    ========================================================================== */
 .testimonial-card {
     background-color: var(--card-bg);
@@ -446,6 +401,7 @@ h1, h2, h3 {
 
 /* ==========================================================================
    Contact Section
+   (The following code is unchanged from the previous version)
    ========================================================================== */
 .contact-grid {
     display: grid;
@@ -499,6 +455,7 @@ h1, h2, h3 {
 
 /* ==========================================================================
    Footer Section
+   (The following code is unchanged from the previous version)
    ========================================================================== */
 .site-footer {
     background-color: var(--primary-color);
