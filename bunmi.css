@@ -192,7 +192,8 @@ h1, h2, h3 {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
-    display:top;
+    display:block;
+   margin:10px;
 }
 /* ==========================================================================
    Responsiveness
@@ -210,8 +211,8 @@ h1, h2, h3 {
     }
 
     .fa-xmark {
-        display:stick;
-        position:top;
+        display:block;
+        position:absolute;
         top: 20px;
         right: 20px;
         z-index: 201;
@@ -557,6 +558,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
