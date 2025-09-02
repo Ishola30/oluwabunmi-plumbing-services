@@ -265,7 +265,7 @@ h1, h2, h3 {
 @media (min-width: 1025px) {
     /* Hide the mobile menu icons on desktop */
     .fa-xmark, .fa-bars {
-        display:none;
+        display:fixed;
     }
     /* Display the full navigation links on desktop */
     .nav-links {
@@ -558,6 +558,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
