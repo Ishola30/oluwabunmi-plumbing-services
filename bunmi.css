@@ -106,6 +106,7 @@ h1, h2, h3 {
     color: #fff;
     font-size: 2rem;
     font-weight: 800;
+   linear-gradent: darkblue,white;
 }
 
 .nav-links {
@@ -264,8 +265,18 @@ h1, h2, h3 {
 /* Media query for Desktop screens (from 1025px) */
 @media (min-width: 1025px) {
     /* Hide the mobile menu icons on desktop */
-    .fa-xmark, .fa-bars {
+    /* Show the hamburger and close icons */
+    .fa-bars {
         display:fixed;
+        z-index: 190; /* Higher z-index to be on top */
+    }
+
+    .fa-xmark {
+        display:flex;
+        position:fixed;
+        top: 30px;
+        right: 30px
+        z-index: 190;
     }
     /* Display the full navigation links on desktop */
     .nav-links {
@@ -558,6 +569,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
