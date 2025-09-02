@@ -95,7 +95,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 2% 6%;
-    position: absolute;
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -558,6 +558,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
