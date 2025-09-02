@@ -267,16 +267,16 @@ h1, h2, h3 {
     /* Hide the mobile menu icons on desktop */
     /* Show the hamburger and close icons */
     .fa-bars {
-        display:none;
-        z-index: 190; /* Higher z-index to be on top */
+        display:fixed;
+        z-index:0; /* Higher z-index to be on top */
     }
 
     .fa-xmark {
-        display:none;
+        display:fixed;
         position:fixed;
         top: 30px;
         right: 30px
-        z-index: 190;
+        z-index:0;
     }
     /* Display the full navigation links on desktop */
     .nav-links {
@@ -569,6 +569,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
