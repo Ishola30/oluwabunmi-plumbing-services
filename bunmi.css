@@ -199,11 +199,6 @@ h1, h2, h3 {
     display: none !important; /* The `!important` rule ensures it is not overridden */
 }
 
-/* Add this to your CSS to create the "slide-in" effect */
-.nav-links.show-menu {
-    right: 0 !important;
-}
-
 /* This media query shows the menu icons only on screens smaller than 768px */
 @media (max-width: 768px) {
     .nav-links {
@@ -222,10 +217,9 @@ h1, h2, h3 {
     .nav-links ul li { display: block; padding: 15px 0; }
     .nav-links ul li a { font-size: 1.2rem; }
     
-    /* This is the key change: position the mobile buttons relative to the viewport */
-    .fa-xmark, .fa-bars {
+    .fa-xmark, .fa-bars {
         display: block !important; /* This shows the buttons on mobile */
-        position: fixed;
+        position: absolute;
         right: 6%;
         top: 20px;
         z-index: 201;
@@ -453,5 +447,75 @@ h1, h2, h3 {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
 
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* ==========================================================================
+   Footer Section
+   (The following code is unchanged from the previous version)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--primary-color);
+    color: #f4f4f9;
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo h3 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
