@@ -188,7 +188,7 @@ h1, h2, h3 {
 }
 
 /* New base rule for menu icons (hidden by default) */
-.fa-xmark, .fa-bars {
+.fa-times, .fa-bars {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
@@ -558,3 +558,4 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
