@@ -199,6 +199,11 @@ h1, h2, h3 {
     display: none !important; /* The `!important` rule ensures it is not overridden */
 }
 
+/* This class controls the slide-in animation for the menu */
+.nav-links.show-menu {
+    right: 0 !important;
+}
+
 /* This media query shows the menu icons only on screens smaller than 768px */
 @media (max-width: 768px) {
     .nav-links {
@@ -217,9 +222,10 @@ h1, h2, h3 {
     .nav-links ul li { display: block; padding: 15px 0; }
     .nav-links ul li a { font-size: 1.2rem; }
     
-    .fa-xmark, .fa-bars {
+    /* This is the key change: position the mobile buttons relative to the viewport */
+    .fa-xmark, .fa-bars {
         display: block !important; /* This shows the buttons on mobile */
-        position: absolute;
+        position: fixed;
         right: 6%;
         top: 20px;
         z-index: 201;
