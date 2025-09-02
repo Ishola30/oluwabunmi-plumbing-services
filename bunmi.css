@@ -267,12 +267,12 @@ h1, h2, h3 {
     /* Hide the mobile menu icons on desktop */
     /* Show the hamburger and close icons */
     .fa-bars {
-        display:fixed;
+        display:none;
         z-index: 190; /* Higher z-index to be on top */
     }
 
     .fa-xmark {
-        display:flex;
+        display:none;
         position:fixed;
         top: 30px;
         right: 30px
@@ -569,6 +569,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
