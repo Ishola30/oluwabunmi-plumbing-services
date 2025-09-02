@@ -204,10 +204,40 @@
         function hideMenu() {
             navlinks.style.right = "-250px";
         }
+        document.addEventListener('DOMContentLoaded', function() {
+    const showMenuBtn = document.getElementById('menu-show-btn');
+    const hideMenuBtn = document.getElementById('menu-hide-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksList = document.querySelectorAll('.nav-links ul li a');
+
+    // Function to show the menu
+    function showMenu() {
+        navLinks.classList.add('show-menu');
+        showMenuBtn.style.display = 'none'; // Hide the show button
+        hideMenuBtn.style.display = 'block'; // Show the hide button
+    }
+
+    // Function to hide the menu
+    function hideMenu() {
+        navLinks.classList.remove('show-menu');
+        showMenuBtn.style.display = 'block'; // Show the show button
+        hideMenuBtn.style.display = 'none'; // Hide the hide button
+    }
+
+    // Event listeners for the buttons
+    showMenuBtn.addEventListener('click', showMenu);
+    hideMenuBtn.addEventListener('click', hideMenu);
+
+    // Event listener for menu links to hide the menu after navigation
+    navLinksList.forEach(link => {
+        link.addEventListener('click', hideMenu);
+    });
+});
     </script>
 </body>
 
 </html>
+
 
 
 
