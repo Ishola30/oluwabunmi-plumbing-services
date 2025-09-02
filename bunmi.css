@@ -188,13 +188,12 @@ h1, h2, h3 {
 }
 
 /* New base rule for menu icons (hidden by default) */
-.nav fa-close, .fa-bars {
+.fa-xmark, .fa-bars {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
-
 /* ==========================================================================
    Responsiveness
    ========================================================================== */
