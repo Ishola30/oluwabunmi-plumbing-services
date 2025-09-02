@@ -193,7 +193,7 @@ h1, h2, h3 {
     color:blue;
     font-size: 2rem;
     cursor: pointer;
-    display:block;
+    display:none !impotant;
      
    margin:10px;
 }
@@ -570,6 +570,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 
 
